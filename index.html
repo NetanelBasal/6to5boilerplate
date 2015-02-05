@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- build:css app.min.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="vendor/wait-me/dist/waitMe.min.css"/>
+    <!-- endbower -->
+    <link rel="stylesheet" href="build/main.css">
+    <!-- endbuild -->
+
+  </head>
+  <body ng-app="test">
+    <div ng-controller="HomeController as vm">
+      {{vm.name}}
+      <button ng-click="vm.get()">change name</button>
+      <div ng-repeat="d in vm.data">
+        <p>{{d.title}}</p>
+        <p>{{d.body}}</p>
+      </div>
+    </div>
+
+    <!-- build:js app.min.js -->
+    <!-- bower:js -->
+    <script src="vendor/jquery/dist/jquery.js"></script>
+    <script src="vendor/wait-me/dist/waitMe.min.js"></script>
+    <!-- endbower -->
+    <script src="build/bundle.js"></script>
+    <!-- endbuild -->
+
+  </body>
+</html>
